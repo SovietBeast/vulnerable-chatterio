@@ -18,3 +18,11 @@ services:
     ports:
       - "8000:8080"
     restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile_front
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
